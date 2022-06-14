@@ -16,8 +16,6 @@ module.exports = {
                 test: /\.(png|jpg|jpeg|gif|mp3|mp4)$/i,
                 loader: 'img-optimize-loader',
                 // use: ['img-optimize-loader', 'file-loader'],
-                test: /\.(png|jpeg|gif|mp3)$/i,
-                loader: 'file-loader',
 
                 options:{
                     name: '[path][name].[ext]'
@@ -41,10 +39,4 @@ module.exports = {
             filename: '[name].[contenthash].css',
         }),
     ],
-    devServer: {
-        watchFiles: ["./*"],
-        port: "9090",
-        open: true,
-        hot: true,
-    }
 }
